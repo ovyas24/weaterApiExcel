@@ -64,7 +64,7 @@ def weather():
     cityData = []
     cities = ['faridabad','delhi','kochi','mumbai','patna']
     for city in cities:
-        response = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=f3232d76c8092c56b0f75fb1dbe9ffa9')
+        response = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={Your API key here}')
         data = response.json()
         cityData.append(clean(data))
     txt(cityData)
